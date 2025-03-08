@@ -37,10 +37,5 @@ class NotesManager:
                 print(note.display())
 
     def search_notes(self, keyword: str):
-        """Finds notes that contain a specific keyword."""
         found_notes = [note for note in self.notes if keyword.lower() in note.content.lower()]
-        if not found_notes:
-            print(f"No notes found with keyword: {keyword}")
-        else:
-            for note in found_notes:
-                print(note.display())
+        return found_notes
